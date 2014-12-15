@@ -1,4 +1,14 @@
-<%= link_to 'Login', new_user_session_path %>
-<%= link_to 'Sign up', new_user_registration_path  %>
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+<nav id="topnav" class="top-bar" data-topbar role="navigation">
+<section class="top-bar-section">
 
+<ul class="right">
+      <li class="active"><%= link_to 'Login', new_user_session_path %></li>
+       <li class="active"><%= link_to 'Sign up', new_user_registration_path%></li>
+        <li class="active"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+
+        </li>
+       </li>
+     </li>
+</ul>
+</nav>
+<%= image_tag("fishing.jpg", :alt => "fishing", :class => "fish") %>
