@@ -1,5 +1,4 @@
-<h1>Listing deals</h1>
-
+<h2>All Deals</h2>
 <table>
   <thead>
     <tr>
@@ -16,8 +15,12 @@
   <tbody>
     <% @deals.each do |deal| %>
       <tr>
-        <td><%= deal.img %></td>
-        <td><%= deal.url %></td>
+        <td>
+          <img src="<%= deal.img %>">
+        </td>
+        <td id="url">
+        <%=link_to deal.url, "http://#{deal.url}"%>
+        </td>
         <td><%= deal.title %></td>
         <td><%= deal.description %></td>
         <td><%= deal.deal_price %></td>
