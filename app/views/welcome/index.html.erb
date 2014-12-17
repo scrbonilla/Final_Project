@@ -1,14 +1,30 @@
 <nav id="topnav" class="top-bar" data-topbar role="navigation">
 <section class="top-bar-section">
+    <span>TierraBarata</span>
 
 <ul class="right">
-      <li class="active"><%= link_to 'Login', new_user_session_path %></li>
-       <li class="active"><%= link_to 'Sign up', new_user_registration_path%></li>
-        <li class="active"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-
+  <li class="divider"></li>
+      <li ><%= link_to 'Login', new_user_session_path %></li>
+      <li class="divider"></li>
+       <li ><%= link_to 'Sign up', new_user_registration_path%></li>
+       <li class="divider"></li>
+        <li ><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         </li>
        </li>
      </li>
 </ul>
 </nav>
-<%= image_tag("fishing.jpg", :alt => "fishing", :class => "fish") %>
+
+<%= image_tag("fishing.jpg", :alt => "fishing", :class => "fish", :id =>"rplimg") %>
+
+<script type="text/javascript">
+    var url = "http://openexchangerates.org/api/latest.json?app_id=bb80b475689a4c53b94ac9387f8b217f"
+    var results = $.ajax({
+        type: 'GET',
+        url: url
+        })
+    .success(function(data){
+        console.log(data.rates)
+    })
+
+</script>
