@@ -1,5 +1,5 @@
-<h2>All Deals</h2>
-<table>
+<h2 id="tbTitle" >All Deals</h2>
+<table class="gradienttable">
   <thead>
     <tr>
       <th>Img</th>
@@ -8,7 +8,7 @@
       <th>Description</th>
       <th>Deal price</th>
       <th>Retail price</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -16,15 +16,15 @@
     <% @deals.each do |deal| %>
       <tr>
         <td>
-          <img src="<%= deal.img %>">
+          <img class="dealImg" src="<%= deal.img %>">
         </td>
-        <td id="url">
+        <td id="tbtxtwrap">
         <%=link_to deal.url, "http://#{deal.url}"%>
         </td>
         <td><%= deal.title %></td>
-        <td><%= deal.description %></td>
-        <td><%= deal.deal_price %></td>
-        <td><%= deal.retail_price %></td>
+        <td id="tbtxtwrap"><%= deal.description %></td>
+        <td><%= "$"+ "#{deal.deal_price}" %></td>
+        <td><%= "$"+ "#{deal.retail_price}" %></td>
         <td><%= link_to 'Show', deal %></td>
         <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
         <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
