@@ -17,14 +17,4 @@
 
 <%= image_tag("fishing.jpg", :alt => "fishing", :class => "fish", :id =>"rplimg") %>
 
-<script type="text/javascript">
-    var url = "http://openexchangerates.org/api/latest.json?app_id=bb80b475689a4c53b94ac9387f8b217f"
-    var results = $.ajax({
-        type: 'GET',
-        url: url
-        })
-    .success(function(data){
-        console.log(data.rates)
-    })
 
-</script>
