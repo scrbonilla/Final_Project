@@ -1,0 +1,16 @@
+<nav id="topnav" class="top-bar" data-topbar role="navigation">
+<section class="top-bar-section">
+    <span>TierraBarata</span>
+
+<ul class="right">
+  <li class="divider"></li>
+      <li ><%= link_to 'Login', new_user_session_path %></li>
+      <li class="divider"></li>
+       <li ><%= link_to 'Sign up', new_user_registration_path%></li>
+       <li class="divider"></li>
+        <li ><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        </li>
+       </li>
+     </li>
+</ul>
+</nav>
