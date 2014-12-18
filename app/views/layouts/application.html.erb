@@ -11,17 +11,25 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:bold, 400, 800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+<!--I removed 'http:' from href so browser may decide the correct protocol and fix heroku -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:bold, 400, 800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.magellan.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
   </head>
 
   <body>
 
-
+<%= render "layouts/header" %>
     <%= yield %>
      <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
     <%= javascript_include_tag "application" %>
+
   </body>
 </html>
 
