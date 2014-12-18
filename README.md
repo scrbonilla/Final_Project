@@ -39,4 +39,4 @@ Tierra Barata is build with Ruby on Rails, JavaScript & Jquery for General Assem
 
 If you have questions about how this website was built, or suggestions for how it could be improved, please contact us.
 
-Take a look at our ERD and our Wireframe.
+Take a look at [wireframe](http://imgur.com/U6sNA3y)
