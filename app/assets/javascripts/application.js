@@ -17,3 +17,13 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+// $( document ).ready(function() {
+//     var need = $("#tip").text().each(function(){
+
+//     });
+
+//     $("#tip").attr("title", need)
+// });
+
+
